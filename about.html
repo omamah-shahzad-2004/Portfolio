@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omamah Shahzad</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Omamah.</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-img">
+            <img src="sticker-removebg-preview.png" alt="">
+            <span class="circle-spin"></span>
+        </div>
+        <div class="about-content">
+            <h3>Undergrad Data Science!</h3>
+            <p>I am a junior-year undergraduate student pursuing a degree in Data Science at FAST-NUCES Lahore. I am passionate about AI and Machine Learning and eager to leverage these technologies to make meaningful contributions to the field.</p>
+        </div>
+        <h3 id="code">Days I <span>Code</span></h3>
+        <div class="calendar">
+            <!-- Loading stuff -->
+        </div>
+        <script>
+            GitHubCalendar(".calendar", "omamah-shahzad-2004");
+        
+            // or enable responsive functionality:
+            GitHubCalendar(".calendar", "omamah-shahzad-2004", { responsive: true });
+        
+            // Use a proxy
+            GitHubCalendar(".calendar", "omamah-shahzad-2004", {
+               proxy (username) {
+                 return fetch(`https://your-proxy.com/github?user=${omamah-shahzad-2004}`)
+               }
+            }).then(r => r.text())
+        </script>
+    </section>
+</body>
+</html>
